@@ -1,0 +1,24 @@
+﻿* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width:100%; height:100%; overflow:hidden; background:#05070a; }
+body { display:grid; place-items:center; }
+canvas { display: block; image-rendering: pixelated; }
+#gameContainer { position: relative; width:min(96vw,170.6667vh,1280px); height:min(96vh,54vw,720px); aspect-ratio:16/9; overflow: hidden; font-family: monospace; background:#000; box-shadow:0 0 40px rgba(0,0,0,0.55); }
+#gameCanvas { width:100%; height:100%; }
+#titleVideo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:2; background:#000; cursor:pointer; }
+#titleVideo.hidden { display:none; }
+#upgradePanel { position: absolute; top:0; left:0; width:100%; height:100%; background:#05070a; display:none; align-items:stretch; justify-content:flex-end; pointer-events:all; }
+#upgradePanel.active { display:flex; }
+#upgradeVideo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; background:#000; pointer-events:none; }
+.upgrade-box { position:relative; z-index:1; width:315px; height:100%; margin-right:22px; padding:12px 14px 10px; background:linear-gradient(90deg,rgba(0,0,0,0.08),rgba(0,0,0,0.68) 18%,rgba(0,0,0,0.9)); display:flex; flex-direction:column; justify-content:center; gap:8px; }
+.upgrade-title { color:#fff; font-size:18px; font-weight:bold; margin-bottom:0; text-align:left; text-shadow:0 0 8px #000; }
+.upgrade-sub { color:#ddd; font-size:10px; margin-bottom:2px; text-align:left; line-height:1.25; text-shadow:0 0 7px #000; }
+#upgradeCoins { color:#FFD700 !important; font-size:13px !important; margin-bottom:2px !important; text-align:left !important; text-shadow:0 0 8px #000; }
+.upg-btn { width:100%; min-height:80px; display:flex; align-items:center; gap:10px; background:rgba(5,7,10,0.72); border:1px solid rgba(210,210,210,0.5); color:#fff; padding:7px; cursor:pointer; font-family:monospace; font-size:12px; border-radius:4px; margin:0; text-align:left; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 0 14px rgba(0,0,0,0.45); }
+.upg-btn:hover { background:rgba(32,38,48,0.84); border-color:#fff; }
+.upg-btn:disabled { opacity:0.42; cursor:not-allowed; filter:grayscale(0.6); }
+.upg-icon { width:66px; height:66px; flex:0 0 66px; border:1px solid rgba(255,255,255,0.55); background:#08090c center/cover no-repeat; border-radius:3px; box-shadow:0 0 10px rgba(0,0,0,0.75); }
+.upg-info { display:flex; flex-direction:column; gap:3px; min-width:0; text-shadow:0 0 7px #000; }
+.upg-name { color:#fff; font:bold 15px monospace; }
+.upg-meta { color:#eee; font:11px monospace; line-height:1.2; }
+.upg-cost { color:#ffd35a; font:bold 12px monospace; }
+#closeUpgrade { width:100%; background:rgba(20,35,22,0.86); border-color:#9f9; color:#fff; cursor:pointer; font-family:monospace; padding:9px 20px; border:1px solid #9f9; border-radius:4px; margin-top:2px; text-shadow:0 0 6px #000; }

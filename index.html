@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suit Gorilla Revenge</title>
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<div id="gameContainer">
+  <canvas id="gameCanvas" width="800" height="450"></canvas>
+  <video id="titleVideo" class="hidden" src="assets/title_intro.mp4" autoplay muted loop playsinline preload="auto"></video>
+  <audio id="titleMusic" src="assets/loading_title_music.mp3" autoplay loop preload="auto"></audio>
+  <audio id="cutsceneMusic" src="assets/cutscene_music.mp3" loop preload="auto"></audio>
+  <audio id="mapMusic" src="assets/map_1_2_music.mp3" loop preload="auto"></audio>
+  <audio id="bossMusic" src="assets/boss_battle_music.mp3" loop preload="auto"></audio>
+  <div id="upgradePanel">
+    <video id="upgradeVideo" src="assets/upgrade_bg_video.mp4" muted loop playsinline preload="auto"></video>
+    <div class="upgrade-box">
+      <div class="upgrade-title">강화 선택</div>
+      <div class="upgrade-sub">강화를 마치면 다음 라운드가 시작됩니다</div>
+      <div id="upgradeCoins" style="color:#FFD700;font-size:14px;margin-bottom:14px;text-align:center;"></div>
+      <button class="upg-btn" id="upgPunch"></button>
+      <button class="upg-btn" id="upgSpeed"></button>
+      <button class="upg-btn" id="upgHp"></button>
+      <button id="closeUpgrade">다음 라운드 시작</button>
+    </div>
+  </div>
+</div>
+  <script src="js/core/assets.js"></script>
+  <script src="js/data/sprites.js"></script>
+  <script src="js/data/config.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/entities/pickups.js"></script>
+  <script src="js/entities/projectiles.js"></script>
+  <script src="js/entities/portal.js"></script>
+  <script src="js/entities/player.js"></script>
+  <script src="js/entities/enemies.js"></script>
+  <script src="js/systems/maps.js"></script>
+  <script src="js/systems/render.js"></script>
+  <script src="js/ui/upgrades.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
